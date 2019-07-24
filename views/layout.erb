@@ -8,5 +8,29 @@
 
     <%=yield%>
 
+
+    <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+      <%if @our_game.up_avail == true %>
+      <a href="/move_up">Move Up</a>
+      <% end %>
+      <%if @our_game.down_avail == true %>
+      <a href="/move_down">Move Down</a>
+      <% end %>
+      <%if @our_game.left_avail == true %>
+      <a href="/move_left">Move Left</a>
+      <% end %>
+      <% if @our_game.right_avail == true %>
+      <a href="/move_right">Move Right</a>
+      <% end %>
+      <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+
+      <%if @our_game.inventory.any? %>
+        <p>Inventory:</p>
+        <ul>
+          <% @our_game.inventory.each do |item| %>
+              <li> <%= item %> </li>
+          <% end %>
+        </ul>
+      <% end %>
   </body>
 </html>
