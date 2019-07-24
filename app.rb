@@ -8,7 +8,7 @@ our_game = Game.new
 
 get ('/')do
   @our_game = our_game
-  @our_game.current_pos = [2,1]
+  @our_game.current_pos = [4,1]
   erb :entryway
 end
 

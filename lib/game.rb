@@ -7,13 +7,15 @@ class Game
 
   def initialize
     @map_state = [
-      [3, 4, 3],
-      [3, 1, 3],
-      [3, 0, 3]
+      [1, 1, 5],
+      [2, 1, 3],
+      [2, 4, 3],
+      [1, 2, 1],
+      [1, 0, 1]
     ]
     @inventory = ["moldy bread"]
-    @current_pos = [2,1]
-    @room_type = ["entryway", "hallway", "parlor", "observatory", "hallway-key"]
+    @current_pos = [4,1]
+    @room_type = ["entryway", "hallway", "parlor", "observatory", "hallway-key", "exit"]
   end
 
   def move_up

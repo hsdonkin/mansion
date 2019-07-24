@@ -1,4 +1,10 @@
 body{
-  background-color: purple;
+  background-color: #7b58ce;
+  color: gold;
+}
+
+a {
+  display: block;
+  font-size: 24px;
   color: gold;
 }

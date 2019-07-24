@@ -1,0 +1,9 @@
+<h1>You're at the exit</h1>
+
+<% if @our_game.inventory.include? "key" %>
+    <h3>You escaped!</h3>
+<% end %>
+
+<% if (@our_game.inventory.include? "key") == false %>
+  <h3>Go get the key, you dingus!</h3>
+<% end %>
