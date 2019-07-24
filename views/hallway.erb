@@ -1,6 +1,14 @@
 <h1>You are in the hallway</h1>
 
+<h3>There is a hobo here.....</h3>
+
+<%if @our_game.up_avail == true %>
 <a href="/move_up">Move Up</a>
+<% end %>
+
+<%if @our_game.down_avail == true %>
+<a href="/move_down">Move Down</a>
+<% end %>
+
 <a href="/move_left">Move Left</a>
 <a href="/move_right">Move Right</a>
-<a href="/move_down">Move Down</a>

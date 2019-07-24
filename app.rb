@@ -6,23 +6,27 @@ require('./lib/game')
 
 our_game = Game.new
 
-
 get ('/')do
+  @our_game = our_game
   erb :entryway
 end
 
 get ('/move_up')do
-erb our_game.move_up.to_sym
+  @our_game = our_game
+  erb our_game.move_up.to_sym
 end
 
 get ('/move_down')do
-erb our_game.move_down.to_sym
+  @our_game = our_game
+  erb our_game.move_down.to_sym
 end
 
 get ('/move_left')do
-erb our_game.move_left.to_sym
+  @our_game = our_game
+  erb our_game.move_left.to_sym
 end
 
 get ('/move_right')do
-erb our_game.move_right.to_sym
+  @our_game = our_game
+  erb our_game.move_right.to_sym
 end

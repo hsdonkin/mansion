@@ -7,16 +7,18 @@ class Game
 
   def initialize
     @map_state = [
-      [1, 1, 3],
-      [3, 1, 1],
-      [2, 0, 1]
+      [3, 1, 3],
+      [3, 1, 3],
+      [3, 0, 3]
     ]
+    binding.pry
     @room_deck = []
     @current_pos = [2,1]
     @room_type = ["entryway", "hallway", "parlor", "observatory"]
   end
 
   def move_up
+    puts @current_pos
     previous_pos = @current_pos
     @current_pos[0] = previous_pos[0] -=1
     self.what_room
@@ -44,18 +46,21 @@ class Game
     @room_type[@map_state[@current_pos[0]][@current_pos[1]]]
   end
 
-
-  def legal_move?(x_mov, y_mov)
-    x_change = @current_pos[1] + y_mov
-    y_change = @current_pos[0] + y_mov
-    if @map_state[x_change] != nil && @map_state[y_change] != nil
-      true
+  def up_avail
+    if @current_pos[0] != 0
+      return true
     else
-      false
+      return false
     end
   end
 
-end
+  def down_avail
+    if @map_state[ (@current_pos[0] + 1) ] != nil
+      return true
+    else
+      return false
+    end
+  end
 
-our_game = Game.new
-binding.pry
+
+end
